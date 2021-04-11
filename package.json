@@ -1,0 +1,25 @@
+{
+  "name": "node-js-esp8266-bin-uploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "pkg": {
+    "targets": [
+      "node12-win-x64"
+    ]
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potaesm/node-js-esp8266-bin-uploader.git"
+  },
+  "author": "Suthinan Musitmani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potaesm/node-js-esp8266-bin-uploader/issues"
+  },
+  "homepage": "https://github.com/potaesm/node-js-esp8266-bin-uploader#readme"
+}
