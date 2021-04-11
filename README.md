@@ -1,5 +1,5 @@
 # ESP8266 Binary Uploader
-# Exexutable Generation
+# Executable Regeneration
 ```bash
 pkg ---output . .
 ```
