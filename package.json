@@ -8,12 +8,16 @@
     "targets": [
       "node14-win-x64",
       "node14-macos-x64"
+    ],
+    "assets": [
+      "python3/**/*",
+      "python3-win/**/*"
     ]
   },
   "scripts": {
     "test": "node index.js",
-    "build-macos": "npm i && ./node_modules/.bin/pkg ---output . .",
-    "build-win": "npm i && .\\node_modules\\.bin\\pkg ---output . .",
+    "build-macos": "npm i && ./node_modules/.bin/pkg ---compress Brotli ---targets node14-macos-x64 ---output . .",
+    "build-win": "npm i && .\\node_modules\\.bin\\pkg ---compress Brotli ---targets node14-win-x64 ---output . .",
     "clean": "find . -iname \"*-uploader-*\" -delete"
   },
   "repository": {
