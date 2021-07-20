@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "node index.js",
-    "build": "./node_modules/.bin/pkg ---output . ."
+    "build": "npm i && ./node_modules/.bin/pkg ---output . .",
+    "build-win":"npm i && .\\node_modules\\.bin\\pkg ---output . ."
   },
   "repository": {
     "type": "git",
