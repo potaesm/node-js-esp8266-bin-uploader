@@ -18,12 +18,12 @@ function run(command) {
     console.log('Getting port...');
     let listPortCommand = 'chgport';
     let listFileCommand = 'dir';
-    let pythonType = '-win';
+    let osOption = '-win';
     const pathSeparator = require('path').sep;
     if (pathSeparator === '/') {
         listPortCommand = 'ls /dev/cu.*';
         listFileCommand = 'ls';
-        pythonType = '';
+        osOption = '';
     }
     const portList = await run(listPortCommand);
     const deviceMapper = `${portList}`.split('\n').filter(mapper => mapper.toLowerCase().includes('lab'))[0];
@@ -41,6 +41,6 @@ function run(command) {
     const binFileName = binFileDetailArr[binFileDetailArr.length - 1];
     console.log('Found binary file ', binFileName);
     console.log('Start uploading...');
-    const result = await run(`python3${pythonType}${pathSeparator}python3 tools/upload.py --chip esp8266 --port ${port} --baud 115200 --before default_reset --after hard_reset write_flash 0x0 build${pathSeparator}${binFileName}`);
+    const result = await run(`python3${osOption}${pathSeparator}python3 tools/upload.py --chip esp8266 --port ${port} --baud 115200 --before default_reset --after hard_reset write_flash 0x0 build${pathSeparator}${binFileName}`);
     return console.log(result);
 })();
