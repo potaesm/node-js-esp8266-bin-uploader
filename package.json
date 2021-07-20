@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "node index.js",
-    "build": "pkg ---output . ."
+    "build": "./node_modules/.bin/pkg ---output . ."
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/potaesm/node-js-esp8266-bin-uploader/issues"
   },
-  "homepage": "https://github.com/potaesm/node-js-esp8266-bin-uploader#readme"
+  "homepage": "https://github.com/potaesm/node-js-esp8266-bin-uploader#readme",
+  "dependencies": {
+    "pkg": "^5.3.0"
+  }
 }
