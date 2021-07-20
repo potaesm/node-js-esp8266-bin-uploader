@@ -12,8 +12,9 @@
   },
   "scripts": {
     "test": "node index.js",
-    "build": "npm i && ./node_modules/.bin/pkg ---output . .",
-    "build-win":"npm i && .\\node_modules\\.bin\\pkg ---output . ."
+    "build-macos": "npm i && ./node_modules/.bin/pkg ---output . .",
+    "build-win": "npm i && .\\node_modules\\.bin\\pkg ---output . .",
+    "clean": "find . -iname \"*-uploader-*\" -delete"
   },
   "repository": {
     "type": "git",

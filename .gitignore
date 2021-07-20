@@ -1,6 +1,7 @@
 **/.DS_Store
 **/__pycache__
+*-linux
 *-macos
-*-win.exe
+*.exe
 node_modules/*
 package-lock.json
