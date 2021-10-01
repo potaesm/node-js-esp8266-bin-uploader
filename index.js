@@ -41,6 +41,6 @@ function run(command) {
     const binFileName = binFileDetailArr[binFileDetailArr.length - 1];
     console.log('Found binary file ', binFileName);
     console.log('Start uploading...');
-    const result = await run(`python3${osOption}${pathSeparator}python3 tools/upload.py --chip esp8266 --port ${port} --baud 115200 --before default_reset --after hard_reset write_flash 0x0 build${pathSeparator}${binFileName}`);
+    const result = await run(`python3${osOption}${pathSeparator}python3 tools${pathSeparator}upload.py --chip esp8266 --port ${port} --baud 115200 --before default_reset --after hard_reset write_flash 0x0 build${pathSeparator}${binFileName}`);
     return console.log(result);
 })();
